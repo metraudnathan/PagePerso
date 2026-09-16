@@ -20,7 +20,7 @@
 
   <style>
     :root {
-      --accent-color: #3b52d4;      /* Deep, refined cobalt accent */
+      --accent-color: #1d2d44;    /* Deep, refined cobalt accent */
       --accent-hover: #283a9c;      /* Hover state accent */
       --bg-main: #faf9f6;           /* Soft off-white */
       --text-dark: #222222;
@@ -187,21 +187,20 @@
     }
 
     /* Publication Links */
-    .pub-link {
-      color: var(--text-dark);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      border-bottom: 1px solid var(--accent-color);
-      padding-bottom: 1px;
-      margin-right: 18px;
-      transition: color 0.2s ease, border-color 0.2s ease;
-    }
+   .pub-link {
+  font-family: inherit; /* Fixes font inconsistency */
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: inherit;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
 
-    .pub-link:hover {
-      color: var(--accent-color);
-      border-bottom-color: var(--accent-hover);
-    }
+.pub-link:hover {
+  color: var(--accent-hover);
+  opacity: 0.8;
+}
 
     /* Footer */
     footer {
